@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { clickProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
 
 const Task = (props) => {
 
@@ -39,7 +38,6 @@ const styles = StyleSheet.create({
     },
     itemText: {
         maxWidth: '80%', // Without this, if text gets too long it will end up pushing the right side button off the screen
-        
     },
     circular: {
         width: 12,

@@ -9,12 +9,11 @@ export default function App() {
 
   const manageTheAddedTask = () =>{
     Keyboard.dismiss();
-    if (task){
-      setTaskItems([...taskItems, task]) // Put outs everything in the tasksItems as a new array and appends the new task to it
-      setTask(' ');
-      console.log(task); // Logs the task in line 13
+    if(task){
+    setTaskItems([...taskItems, task]) // Put outs everything in the tasksItems as a new array and appends the new task to it
+    setTask('');
+    console.log(task); // Logs the task in line 13
     }
-    
   }
 
   const completeTheTask = (index) => {
@@ -56,7 +55,7 @@ export default function App() {
         behaviour = {Platform.OS == "ios" ? "padding" : "height"}
         style={styles.writeTaskWrapper}
       >
-        <TextInput style={styles.input} placeholder={'Write a Task'} value ={task} onChangeText={text => setTask(text)} />
+        <TextInput style={styles.input} placeholder={'Please Add a Task!'} value ={task} onChangeText={text => setTask(text)} />
         <TouchableOpacity onPress={() => manageTheAddedTask()}>
           <View style={styles.addWrapper}>
             <Text style={styles.addText}>+</Text>
